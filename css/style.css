@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--back-color);
+}
+
+:root {
+  --back-color :#0d1117 ;
+  --note-color: rgba(255,255,255,.11);
+  --style-color : #9e9e9e;
+}
+.main{
+  position :absolute;
+  right : 20px ;
+  top: 20px ;
+  border-radius: 10px;
+  background-color:var(--style-color);
+  cursor: pointer;
+  /* width: fit-content; */
+
+}
+.main p {
+  color : #fff ;
+  padding: 10px 15px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  gap : 20px; 
+  padding-top: 150px;
+}
+
+.container .notes .note {
+  background-color: white;
+  height: 400px;
+}
+.container .note .title {
+  background-color: var(--style-color);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.container .note .title .time {
+  color :#fff;
+  font-weight: bold;
+}
+.container .note .title i {
+  color: white;
+  cursor: pointer;
+}
+
+.note .text {
+  padding: 20px ;
+}
+
+.note textarea {
+  height: 400px;
+  width: 100%;
+  resize: none;
+  padding: 20px;
+  font-size: 20px;
+  border: none ;
+  caret-color:var(--style-color);
+  line-height: 1.6;
+  background-color: var(--note-color);
+  color: #fff;
+}
+
+.note textarea:focus {
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.content {
+  width: 100%;
+  height: 400px;
+  padding: 20px;
+  font-size: 20px;
+  line-height : 1.6;
+  background-color: var(--note-color);
+  color: #fff;
+
+}
